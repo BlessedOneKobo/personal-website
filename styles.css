@@ -1,0 +1,122 @@
+:root {
+    --color-green: #02d061;
+    --color-white: hsl(0, 0%, 100%);
+    --color-grey-700: hsl(0, 0%, 20%);
+    --color-grey-800: hsl(0, 0%, 12%);
+    --color-grey-900: hsl(0, 0%, 8%);
+    --button-radius: 0.5rem;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./Inter-VariableFont_slnt\,wght.ttf");
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+p {
+    margin: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: var(--color-grey-900);
+    height: 100vh;
+}
+
+p,
+blockquote,
+a {
+    font-size: 0.875rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card {
+    background-color: var(--color-grey-800);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+    color: var(--color-white);
+    padding: 2rem;
+    max-width: 85%;
+
+    img {
+        border-radius: 100%;
+    }
+
+    & > .title {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        h1 {
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-weight: 700;
+            color: var(--color-green);
+        }
+    }
+
+    & > .links {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+
+        li {
+            width: 100%;
+            border-radius: var(--button-radius);
+        }
+
+        a {
+            color: var(--color-white);
+            text-decoration: none;
+            background-color: var(--color-grey-700);
+            font-weight: 600;
+            width: 100%;
+            display: inline-block;
+            text-align: center;
+            padding: 1rem 1rem;
+            border-radius: var(--button-radius);
+            transition:
+                background-color 0.3s ease-in-out,
+                color 0.3s ease-in-out,
+                transform 0.2s ease-in-out;
+
+            &:hover {
+                background-color: var(--color-green);
+                color: var(--color-grey-900);
+                transform: translateY(-3px);
+            }
+        }
+    }
+}
+
+@media (min-width: 480px) {
+    .card {
+        min-width: 25rem;
+    }
+}
