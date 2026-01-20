@@ -54,7 +54,7 @@ main {
     align-items: center;
     color: var(--color-white);
     padding: 2rem;
-    max-width: 85%;
+    min-width: 85%;
 
     img {
         border-radius: 100%;
