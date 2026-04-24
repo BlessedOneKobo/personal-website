@@ -1,84 +1,220 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Abel Kalu (BlessedOneKobo)</title>
-        <link rel="preload" href="./styles.css" as="style" />
-        <link
-            rel="preload"
-            href="./Inter-VariableFont_slnt,wght.ttf"
-            as="font"
-        />
-        <link rel="preload" href="./avatar.jpg" as="image" />
-        <link rel="stylesheet" href="./styles.css" />
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abel Kalu - Frontend Engineer</title>
+    <link rel="preload" href="./styles.css" as="style" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="preload"
+      href="../assets/fonts/Inter-VariableFont_slnt,wght.ttf"
+      as="font"
+    />
+  </head>
 
-    <body>
-        <main>
-            <div class="card">
-                <div class="image-container">
-                    <img
-                        src="./avatar.jpg"
-                        alt="avatar image"
-                        width="100"
-                        height="100"
-                        fetchpriority="high"
-                    />
-                </div>
+  <body>
+    <header>
+      <div class="contact-email">
+        <div class="email-icon">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+            ></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </div>
+        <a href="mailto:abelamadikalu@gmail.com">abelamadikalu@gmail.com</a>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <button
+              class="theme-toggle"
+              id="theme-toggle"
+              aria-label="Toggle Dark Mode"
+            >
+              🌙
+            </button>
+          </li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#work">Works</a></li>
+          <li>
+            <a href="https://github.com/BlessedOneKobo" target="_blank"
+              >Github</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-                <div class="title">
-                    <h1>Abel Kalu</h1>
-                    <p>Lagos, Nigeria</p>
-                </div>
+    <div class="container">
+      <main>
+        <section class="hero">
+          <div class="profile-container">
+            <img
+              src="../assets/images/avatar.jpg"
+              alt="avatar image"
+              width="100"
+              height="100"
+              class="profile-pic"
+              fetchpriority="high"
+            />
+          </div>
+          <p class="greeting">Hi, I'm Abel ✌️</p>
+          <h1>Building digital products, brands, and experiences.</h1>
+          <p>
+            I specialize in building
+            <strong>highly scalable web applications</strong>,
+            <strong> robust UI architectures</strong>, and
+            <strong> rich user experiences </strong>
+          </p>
+          <a href="mailto:abelamadikalu@gmail.com" class="btn-primary">
+            Connect with me
+          </a>
+        </section>
 
-                <div class="quote">
-                    <blockquote>"Software mechanic"</blockquote>
-                </div>
+        <section id="skills" class="skills">
+          <h2 class="section-title">Technologies & Tools</h2>
+          <div class="skill-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">PHP</span>
+            <span class="tag">React</span>
+            <span class="tag">VueJS</span>
+            <span class="tag">NextJS</span>
+            <span class="tag">Laravel</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">Bootstrap</span>
+            <span class="tag">Shadcn</span>
+            <span class="tag">Git & GitHub</span>
+            <span class="tag">Gitlab</span>
+            <span class="tag">Jira</span>
+            <span class="tag">Netlify</span>
+            <span class="tag">Cloudflare</span>
+            <span class="tag">Paystack</span>
+          </div>
+        </section>
 
-                <ul class="links">
-                    <li>
-                        <a
-                            href="https://www.github.com/BlessedOneKobo"
-                            target="_blank"
-                        >
-                            GitHub
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://www.frontendmentor.io/profile/BlessedOneKobo"
-                            target="_blank"
-                        >
-                            Frontend Mentor
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://www.linkedin.com/in/abel-kalu-79870a26b"
-                            target="_blank"
-                        >
-                            LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://www.x.com/BlessedOneKobo"
-                            target="_blank"
-                        >
-                            Twitter
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://www.instagram.com/blessedonekobo"
-                            target="_blank"
-                        >
-                            Instagram
-                        </a>
-                    </li>
-                </ul>
+        <section id="work">
+          <h2 class="section-title">Selected Works</h2>
+
+          <div class="work-list">
+            <div class="project">
+              <div class="project-header">
+                <h3>Obiex Africa</h3>
+              </div>
+              <div class="image-grid grid-3-cols">
+                <img
+                  src="./assets/images/obiex-website-desktop.png"
+                  alt="Obiex Website Landing Page"
+                  class="project-img"
+                />
+                <img
+                  src="./assets/images/obiex-webapp-desktop.png"
+                  alt="Obiex Web Application Dashboard"
+                  class="project-img"
+                />
+                <img
+                  src="./assets/images/obiex-admin.png"
+                  alt="Obiex Admin Panel"
+                  class="project-img"
+                />
+              </div>
             </div>
-        </main>
-    </body>
+
+            <div class="project">
+              <div class="project-header">
+                <h3>Glee Education Consult</h3>
+              </div>
+              <div class="image-grid grid-2-cols">
+                <img
+                  src="./assets/images/glee-web.png"
+                  alt="Glee Education Website"
+                  class="project-img"
+                />
+                <img
+                  src="./assets/images/glee-admin.png"
+                  alt="Glee Education Admin Dashboard"
+                  class="project-img"
+                />
+              </div>
+            </div>
+
+            <div class="project">
+              <div class="project-header">
+                <h3>Wishbud</h3>
+              </div>
+              <div class="image-grid grid-1-col">
+                <img
+                  src="./assets/images/wishbud-desktop.png"
+                  alt="Cryset Trading Platform Dashboard"
+                  class="project-img"
+                />
+              </div>
+            </div>
+
+            <div class="project">
+              <div class="project-header">
+                <h3>Cryset</h3>
+              </div>
+              <div class="image-grid grid-1-col">
+                <img
+                  src="./assets/images/cryset.png"
+                  alt="Cryset Trading Platform Dashboard"
+                  class="project-img"
+                />
+              </div>
+            </div>
+
+            <div class="project">
+              <div class="project-header">
+                <h3>Writers.ng</h3>
+              </div>
+              <div class="image-grid grid-1-col">
+                <img
+                  src="./assets/images/writers-1.png"
+                  alt="Cryset Trading Platform Dashboard"
+                  class="project-img"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+      const body = document.body;
+
+      // Check for saved preference
+      if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-theme");
+        themeToggle.textContent = "☀️";
+      }
+
+      themeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-theme");
+        if (body.classList.contains("dark-theme")) {
+          localStorage.setItem("theme", "dark");
+          themeToggle.textContent = "☀️";
+        } else {
+          localStorage.setItem("theme", "light");
+          themeToggle.textContent = "🌙";
+        }
+      });
+    </script>
+  </body>
 </html>
