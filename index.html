@@ -3,63 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abel Kalu - Frontend Engineer</title>
-    <link rel="preload" href="./styles.css" as="style" />
-    <link rel="stylesheet" href="./styles.css" />
+    <title>Abel Kalu - Fullstack Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="preload"
-      href="../assets/fonts/Inter-VariableFont_slnt,wght.ttf"
-      as="font"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      rel="stylesheet"
     />
+    <link rel="preload" href="styles.css" as="style" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <header>
-      <div class="contact-email">
-        <div class="email-icon">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path
-              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-            ></path>
-            <polyline points="22,6 12,13 2,6"></polyline>
-          </svg>
-        </div>
-        <a href="mailto:blessedonekobo@gmail.com">blessedonekobo@gmail.com</a>
-      </div>
-      <nav>
-        <ul>
-          <li>
+    <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav-inner">
+          <a href="#home" class="nav-logo">BlessedOneKobo</a>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="nav-right">
             <button
-              class="theme-toggle"
-              id="theme-toggle"
-              aria-label="Toggle Dark Mode"
+              class="theme-btn"
+              id="theme-btn"
+              aria-label="Toggle color scheme"
             >
-              🌙
+              <span class="theme-btn-icon" id="theme-icon">☀</span>
+              <span id="theme-label">Light</span>
             </button>
-          </li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#work">Works</a></li>
-          <li>
-            <a href="https://github.com/BlessedOneKobo" target="_blank"
-              >Github</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-    <div class="container">
-      <main>
-        <section class="hero">
+    <section class="hero" id="home" aria-label="Introduction">
+      <div class="container">
+        <div class="hero-inner">
           <div class="profile-container">
             <img
               src="../assets/images/avatar.jpg"
@@ -70,175 +51,323 @@
               fetchpriority="high"
             />
           </div>
-          <p class="greeting">Hi, I'm Abel ✌️</p>
-          <h1>Building digital products, brands, and experiences.</h1>
-          <p>
-            I specialize in building
-            <strong>highly scalable web applications</strong>,
-            <strong> robust UI architectures</strong>, and
-            <strong> rich user experiences </strong>
+          <h1 class="hero-headline">Hi, I'm Abel Kalu</h1>
+          <p class="hero-sub">
+            A <strong>software mechanic</strong> with 5+ years of experience
+            building digital experiences across numerous sectors
           </p>
-          <a href="mailto:blessedonekobo@gmail.com" class="btn-primary">
-            Connect with me
+          <div class="hero-actions">
+            <a href="#work" class="btn-primary">View work</a>
+            <a href="#contact" class="btn-ghost">Get in touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+          <div class="reveal">
+            <p class="section-label">About</p>
+            <h2 class="section-title" id="about-title">
+              Developer<br />& builder.
+            </h2>
+          </div>
+          <div class="about-body reveal reveal-d1">
+            <p>
+              I'm a full-stack developer with a strong frontend lean,
+              passionate about building interactive, intuitive, and inclusive
+              digital experiences—blending seamless functionality with great
+              user experience.
+            </p>
+            <div class="skills-wrap">
+              <p class="skills-label">Core skills</p>
+              <div class="skills-tags">
+                <span class="s-tag">HTML</span>
+                <span class="s-tag">CSS</span>
+                <span class="s-tag">JavaScript</span>
+                <span class="s-tag">TypeScript</span>
+                <span class="s-tag">PHP</span>
+                <span class="s-tag">React</span>
+                <span class="s-tag">Vue.js</span>
+                <span class="s-tag">Next.js</span>
+                <span class="s-tag">Laravel</span>
+                <span class="s-tag">Tailwind CSS</span>
+                <span class="s-tag">Shadcn</span>
+                <span class="s-tag">Git & GitHub</span>
+                <span class="s-tag">Paystack</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="work-header reveal">
+          <p class="section-label">Work</p>
+          <h2 class="section-title" id="work-title">Selected projects.</h2>
+        </div>
+
+        <div class="work-grid">
+          <a
+            href="https://obiex.finance"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card card-full reveal"
+          >
+            <div class="card-thumb card-thumb-wide">
+              <img
+                src="assets/images/obiex-website-desktop.png"
+                alt="Obiex Finance marketing website"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <div class="card-top">
+                <span class="card-title">Obiex Finance — Website</span>
+                <span class="card-arrow" aria-hidden="true">↗</span>
+              </div>
+              <p class="card-desc">
+                Marketing website for a crypto exchange
+              </p>
+              <div class="card-tags">
+                <span class="c-tag">Website</span>
+                <span class="c-tag">Finance</span>
+                <span class="c-tag">Crypto</span>
+              </div>
+            </div>
           </a>
-        </section>
 
-        <section id="skills" class="skills">
-          <h2 class="section-title">Technologies & Tools</h2>
-          <div class="skill-tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">PHP</span>
-            <span class="tag">React</span>
-            <span class="tag">VueJS</span>
-            <span class="tag">NextJS</span>
-            <span class="tag">Laravel</span>
-            <span class="tag">Tailwind CSS</span>
-            <span class="tag">Bootstrap</span>
-            <span class="tag">Shadcn</span>
-            <span class="tag">Git & GitHub</span>
-            <span class="tag">Gitlab</span>
-            <span class="tag">Jira</span>
-            <span class="tag">Netlify</span>
-            <span class="tag">Cloudflare</span>
-            <span class="tag">Paystack</span>
+          <a
+            href="https://app.obiex.finance"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card reveal reveal-d1"
+          >
+            <div class="card-thumb card-thumb-std">
+              <img
+                src="assets/images/obiex-webapp-desktop.png"
+                alt="Obiex Finance web application dashboard"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <div class="card-top">
+                <span class="card-title">Obiex — Web App</span>
+                <span class="card-arrow" aria-hidden="true">↗</span>
+              </div>
+              <p class="card-desc">
+                User-facing dashboard for portfolio management, crypto trading,
+                quick swaps, and utility payments.
+              </p>
+              <div class="card-tags">
+                <span class="c-tag">Web App</span>
+                <span class="c-tag">Dashboard</span>
+                <span class="c-tag">Crypto</span>
+                <span class="c-tag">Finance</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://app.obiex.finance"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card reveal reveal-d2"
+          >
+            <div class="card-thumb card-thumb-std">
+              <img
+                src="assets/images/obiex-admin.png"
+                alt="Obiex admin statistics dashboard"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <div class="card-top">
+                <span class="card-title">Obiex — Admin</span>
+                <span class="card-arrow" aria-hidden="true">↗</span>
+              </div>
+              <p class="card-desc">
+                Internal admin platform with live statistics, user management,
+                trade monitoring, and advanced analytics.
+              </p>
+              <div class="card-tags">
+                <span class="c-tag">Crypto</span>
+                <span class="c-tag">Admin Panel</span>
+                <span class="c-tag">Analytics</span>
+                <span class="c-tag">Internal Tool</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://gleeweb.stgdo.afrivelle.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card card-full reveal"
+          >
+            <div class="card-thumb card-thumb-wide">
+              <img
+                src="assets/images/glee-web.png"
+                alt="Glee Education study abroad platform website"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <div class="card-top">
+                <span class="card-title">Glee Education — Website</span>
+                <span class="card-arrow" aria-hidden="true">↗</span>
+              </div>
+              <p class="card-desc">
+                Study abroad platform helping students discover programs,
+                explore universities across multiple countries, and manage their
+                application journey.
+              </p>
+              <div class="card-tags">
+                <span class="c-tag">Web App</span>
+                <span class="c-tag">Education</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://gleeweb.stgdo.afrivelle.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card reveal reveal-d1"
+          >
+            <div class="card-thumb card-thumb-std">
+              <img
+                src="assets/images/glee-admin.png"
+                alt="Glee Education admin dashboard"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <div class="card-top">
+                <span class="card-title">Glee — Admin</span>
+                <span class="card-arrow" aria-hidden="true">↗</span>
+              </div>
+              <p class="card-desc">
+                Admin dashboard for managing users, tracking applications,
+                overseeing financials, and assigning agents across programs.
+              </p>
+              <div class="card-tags">
+                <span class="c-tag">Admin Panel</span>
+                <span class="c-tag">Education</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://desk.cryset.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card reveal reveal-d2"
+          >
+            <div class="card-thumb card-thumb-std">
+              <img
+                src="assets/images/cryset-1.png"
+                alt="Cryset crypto rate dashboard"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <div class="card-top">
+                <span class="card-title">Cryset</span>
+                <span class="card-arrow" aria-hidden="true">↗</span>
+              </div>
+              <p class="card-desc">
+                Real-time crypto rate aggregator displaying live rate history
+                with transaction streaming
+              </p>
+              <div class="card-tags">
+                <span class="c-tag">Crypto</span>
+                <span class="c-tag">Data visualization</span>
+              </div>
+            </div>
+          </a>
+
+          <div class="card card-static reveal reveal-d1">
+            <div class="card-thumb card-thumb-std">
+              <img
+                src="assets/images/wishbud-desktop.png"
+                alt="WishBud gift wishlist app landing page"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-body">
+              <div class="card-top">
+                <span class="card-title">WishBud</span>
+              </div>
+              <p class="card-desc">
+                Landing page for a gift wishlist mobile app. Used to share
+                wishes with friends and loved ones across birthdays,
+                graduations, and special occasions.
+              </p>
+              <div class="card-tags">
+                <span class="c-tag">Landing Page</span>
+                <span class="c-tag">Mobile App</span>
+              </div>
+            </div>
           </div>
-        </section>
 
-        <section id="work">
-          <h2 class="section-title">Selected Works</h2>
-
-          <div class="work-list">
-            <div class="project">
-              <div class="project-header">
-                <h3>Obiex Africa</h3>
-              </div>
-              <div class="image-grid grid-3-cols">
-                <a
-                  href="https://obiex.finance"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="./assets/images/obiex-website-desktop.png"
-                    alt="Obiex Website Landing Page"
-                    class="project-img"
-                  />
-                </a>
-                <a
-                  href="https://app.obiex.finance"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="./assets/images/obiex-webapp-desktop.png"
-                    alt="Obiex Web Application Dashboard"
-                    class="project-img"
-                  />
-                </a>
-                <img
-                  src="./assets/images/obiex-admin.png"
-                  alt="Obiex Admin Panel"
-                  class="project-img"
-                />
-              </div>
+          <div class="card card-static reveal reveal-d2">
+            <div class="card-thumb card-thumb-std">
+              <img
+                src="assets/images/writers-1.png"
+                alt="Writers.ng writing services platform"
+                loading="lazy"
+              />
             </div>
-
-            <div class="project">
-              <div class="project-header">
-                <h3>Glee Education Consult</h3>
+            <div class="card-body">
+              <div class="card-top">
+                <span class="card-title">Writers.ng</span>
               </div>
-              <div class="image-grid grid-2-cols">
-                <a
-                  href="https://gleeweb.stgdo.afrivelle.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="./assets/images/glee-web.png"
-                    alt="Glee Education Website"
-                    class="project-img"
-                  />
-                </a>
-                <img
-                  src="./assets/images/glee-admin.png"
-                  alt="Glee Education Admin Dashboard"
-                  class="project-img"
-                />
-              </div>
-            </div>
-
-            <div class="project">
-              <div class="project-header">
-                <h3>Wishbud</h3>
-              </div>
-              <div class="image-grid grid-1-col">
-                <img
-                  src="./assets/images/wishbud-desktop.png"
-                  alt="Cryset Trading Platform Dashboard"
-                  class="project-img"
-                />
-              </div>
-            </div>
-
-            <div class="project">
-              <div class="project-header">
-                <h3>Cryset</h3>
-              </div>
-              <div class="image-grid grid-1-col">
-                <a
-                  href="https://desk.cryset.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="./assets/images/cryset.png"
-                    alt="Cryset Trading Platform Dashboard"
-                    class="project-img"
-                  />
-                </a>
-              </div>
-            </div>
-
-            <div class="project">
-              <div class="project-header">
-                <h3>Writers.ng</h3>
-              </div>
-              <div class="image-grid grid-1-col">
-                <img
-                  src="./assets/images/writers-1.png"
-                  alt="Cryset Trading Platform Dashboard"
-                  class="project-img"
-                />
+              <p class="card-desc">
+                Writing services platform connecting clients with professional
+                Nigerian writers
+              </p>
+              <div class="card-tags">
+                <span class="c-tag">Web App</span>
+                <span class="c-tag">Services</span>
               </div>
             </div>
           </div>
-        </section>
-      </main>
-    </div>
+        </div>
+      </div>
+    </section>
 
-    <script>
-      const themeToggle = document.getElementById("theme-toggle");
-      const body = document.body;
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-inner reveal">
+          <p class="section-label">Contact</p>
+          <h2 class="contact-title" id="contact-title">
+            Let's work<br />together.
+          </h2>
+          <p class="contact-sub">
+            Have a project in mind or want to collaborate? I'm always open to
+            new opportunities and interesting problems to solve.
+          </p>
+          <div class="contact-actions">
+            <a href="mailto:blessedonekobo@gmail.com" class="btn-primary">
+              Say hello
+            </a>
+            <a
+              href="https://www.linkedin.com/in/abel-kalu-79870a26b"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-ghost"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      // Check for saved preference
-      if (localStorage.getItem("theme") === "dark") {
-        body.classList.add("dark-theme");
-        themeToggle.textContent = "☀️";
-      }
-
-      themeToggle.addEventListener("click", () => {
-        body.classList.toggle("dark-theme");
-        if (body.classList.contains("dark-theme")) {
-          localStorage.setItem("theme", "dark");
-          themeToggle.textContent = "☀️";
-        } else {
-          localStorage.setItem("theme", "light");
-          themeToggle.textContent = "🌙";
-        }
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
